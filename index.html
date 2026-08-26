@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تطبيقي على Smart TV</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* تصميم الأزرار */
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #2a2a2a;
+            color: white;
+            border: 3px solid transparent;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        /* الشكل عند الوقوف على الزر بالريموت (Focus) */
+        .btn:focus, .btn.active {
+            border-color: #00a8ff;
+            background-color: #0059b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>مرحبًا بك في تطبيقي على Vestel MB230</h1>
+
+    <div class="button-container">
+        <!-- إضافة tabindex="0" إجباري لتمكين التنقل بالريموت -->
+        <button class="btn focusable" tabindex="0">الخيار الأول</button>
+        <button class="btn focusable" tabindex="0">الخيار الثاني</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
